@@ -3,7 +3,7 @@ sample = ['GTA','GGG','CAC']
 
 def read_dna(dna_file):
   dna_data = ""
-  with open("dna_file", "r") as f:
+  with open(dna_file, "r") as f:
     for line in f:
       dna_data += line
   return dna_data
@@ -15,13 +15,13 @@ def dna_codons(dna):
   return codons
 def match_dna(dna):
   matches = 0
-  for condon in dna:
+  for codon in dna:
     if codon in sample:
       matches += 1
   return matches
 def is_criminal(dna_sample):
   dna_data = read_dna(dna_sample)
-  condons = dna_condons(dna_data)
+  condons = dna_codons(dna_data)
   num_matches = match_dna(codons)
   if num_matches >= 3:
     print "Number of codon matches %s. Therefore, DNA profile matches! Investigation should continue!." % num_matches
