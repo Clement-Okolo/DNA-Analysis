@@ -31,9 +31,9 @@ def is_criminal(dna_sample):
   codons = dna_codons(dna_data)
   num_matches = match_dna(codons)
   if num_matches >= 3:
-    print "Number of codon matches %s. Therefore, DNA profile matches! Investigation should continue!." % num_matches
+    print "Number of codon matches %s. DNA profile matches! Investigation should continue!" % num_matches
   else:
-    print "Number of codon matches %s. Therefore, DNA profile doesn't matches! Suspect can be freed!." % num_matches
+    print "Number of codon matches %s. DNA profile doesn't match! Suspect can be freed!" % num_matches
 
 is_criminal('suspect1.txt')
 is_criminal('suspect2.txt')
