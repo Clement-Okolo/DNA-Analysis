@@ -21,7 +21,7 @@ def match_dna(dna):
   return matches
 def is_criminal(dna_sample):
   dna_data = read_dna(dna_sample)
-  condons = dna_codons(dna_data)
+  codons = dna_codons(dna_data)
   num_matches = match_dna(codons)
   if num_matches >= 3:
     print "Number of codon matches %s. Therefore, DNA profile matches! Investigation should continue!." % num_matches
